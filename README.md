@@ -26,11 +26,11 @@ Docker를 이용한 MariaDB 환경 구성 및 Spring Boot 연결을 중심으로
 ```
 src
 ┣ main
-┃ ┣ java/com.github.hyunsoo.quizexploration
+┃ ┣ java/com.github.laugh4mile.quizexploration
 ┃ ┃ ┣ controller
-┃ ┃ ┣ service
+┃ ┃ ┣ entity
 ┃ ┃ ┣ repository
-┃ ┃ ┗ entity
+┃ ┃ ┗ service
 ┃ ┗ resources/templates
 ┗ test
 ```
