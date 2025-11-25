@@ -1,4 +1,4 @@
-package com.github.laugh4mile.QuizExploration;
+package com.github.laugh4mile.quizexploration;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

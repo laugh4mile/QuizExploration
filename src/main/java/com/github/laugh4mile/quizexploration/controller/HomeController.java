@@ -1,4 +1,4 @@
-package com.github.laugh4mile.QuizExploration.controller;
+package com.github.laugh4mile.quizexploration.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
