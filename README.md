@@ -45,10 +45,10 @@ src
 docker run -d \
   --name my-mariadb \
   -p 3306:3306 \
-  -e MYSQL_ROOT_PASSWORD=1234 \
+  -e MYSQL_ROOT_PASSWORD=test \
   -e MYSQL_DATABASE=testdb \
-  -e MYSQL_USER=hyunsoo \
-  -e MYSQL_PASSWORD=1234 \
+  -e MYSQL_USER=test \
+  -e MYSQL_PASSWORD=test \
   -v mariadb_data:/var/lib/mysql \
   mariadb:11
 ```
