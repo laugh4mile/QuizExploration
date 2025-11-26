@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div th:fragment="content">
+    <h2 class="mb-1">시험 목록</h2>
+    <a th:href="@{/exams/new}" class="btn btn-success mb-3">새 시험 등록</a>
+
+    <table class="table table-striped table-hover">
+        <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>시험 이름</th>
+            <th>설명</th>
+            <th>만점</th>
+            <th>합격 점수</th>
+            <th>등록일</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="exam : ${exams}">
+            <td th:text="${exam.id}"></td>
+            <td th:text="${exam.name}"></td>
+            <td th:text="${exam.description}"></td>
+            <td th:text="${exam.maxScore}"></td>
+            <td th:text="${exam.passScore}"></td>
+            <td th:text="${#dates.format(exam.createdAt,'yyyy-MM-dd')}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

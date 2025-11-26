@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div th:fragment="content">
+    <h2 class="mb-3">새 시험 등록</h2>
+
+    <form th:action="@{/exams}" th:object="${exam}" method="post" class="row g-3">
+        <div class="col-md-6">
+            <label class="form-label">시험 이름</label>
+            <input type="text" th:field="*{name}" class="form-control" required>
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label">합격 점수</label>
+            <input type="number" th:field="*{passScore}" class="form-control" required>
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label">만점</label>
+            <input type="number" th:field="*{maxScore}" class="form-control">
+        </div>
+
+        <div class="col-12">
+            <label class="form-label">설명</label>
+            <textarea th:field="*{description}" class="form-control" rows="3"></textarea>
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">등록</button>
+            <a th:href="@{/exams}" class="btn btn-secondary">취소</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>
