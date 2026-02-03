@@ -45,11 +45,9 @@ src
 docker run -d \
   --name my-mariadb \
   -p 3306:3306 \
-  -e MYSQL_ROOT_PASSWORD=test \
-  -e MYSQL_DATABASE=testdb \
-  -e MYSQL_USER=test \
-  -e MYSQL_PASSWORD=test \
-  -v mariadb_data:/var/lib/mysql \
+  -e MARIADB_ROOT_PASSWORD=testpw \
+  -e MARIADB_DATABASE=testdb \
+  -v mariadb_quiz_data:/var/lib/mysql \
   mariadb:11
 ```
 ### 2. Spring Boot 실행
@@ -65,7 +63,7 @@ docker run -d \
 | 2025-11-24 | 프로젝트 생성, GitHub 연동 완료 |
 | 2025-11-24 | Docker MariaDB 컨테이너 실행 |
 | 2025-11-25 | Entity, Repository, Service 생성 |
-| 2025-11-26 |  |
+| 2026-02-03 | 다시 환경 세팅 |
 
 ---
 
